@@ -14,6 +14,7 @@ export default class HomeScreen extends React.Component{
             <View>
             <ImageBackground source={require('../media/tyket_logo.jpg')} style={{ height: '100%', width: '100%' }}>
                     <View style={styles.buttonGroup}>
+                        <Text style={styles.textStyle}>Your Events Everywhere!</Text>
                         <ButtonClass
                             title='Sign Up'
                             icon={{ name: 'description' }}
@@ -23,6 +24,9 @@ export default class HomeScreen extends React.Component{
                          onPress={() => this.props.navigation.navigate('SignIn')}
                             icon={{ name: 'label' }}
                          />
+                    </View>
+                    <View>
+                        <Text style={styles.textFont} > Copyright ©2018 MyN3 Corporation Inc. All rights reserved.</Text>
                     </View>
             </ImageBackground>    
             </View>
@@ -46,7 +50,18 @@ const styles = StyleSheet.create({
         borderColor: '#fff'
     },
     buttonGroup: {
-        marginTop: 400,
+        marginTop: 375,
     },
+    textStyle: {
+        color: 'blue',
+        textAlign: 'right',
+        marginTop: -10,
+        marginRight: 20,
+    },
+    textFont: {
+        paddingTop: 7,
+        fontSize: 12,
+        textAlign: 'center'
+    }
 });
 
